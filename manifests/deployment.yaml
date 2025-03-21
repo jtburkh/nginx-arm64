@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: ghcr.io/ironstar-io/nginx-arm64:latest
+          image: nginx:stable-alpine
           ports:
             - containerPort: 80
