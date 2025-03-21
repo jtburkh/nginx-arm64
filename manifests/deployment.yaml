@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-arm64
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-arm64
+  template:
+    metadata:
+      labels:
+        app: nginx-arm64
+    spec:
+      containers:
+        - name: nginx
+          image: ghcr.io/ironstar-io/nginx-arm64:latest
+          ports:
+            - containerPort: 80
